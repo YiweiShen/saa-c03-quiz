@@ -14,7 +14,7 @@ const quiz = {
       questionType: 'text',
       answerSelectionType: q.correctAnswer.length > 1 ? 'multiple' : 'single',
       answers: q.answers,
-      correctAnswer: q.correctAnswer,
+      correctAnswer: q.correctAnswer.map((answer) => answer + 1),
       point: 1,
       messageForCorrectAnswer: 'Correct!',
       messageForIncorrectAnswer: 'Wrong!'

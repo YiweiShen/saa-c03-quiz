@@ -973,7 +973,7 @@ export const questions: Question[] = [
       "Configure cross-account access for the marketing firm so that the marketing firm has access to the company's S3 bucket.",
       "Configure the company's S3 bucket to use S3 Intelligent-Tiering. Sync the S3 bucket to one of the marketing firm's S3 buckets."
     ],
-    correctAnswer: [0]
+    correctAnswer: [1]
   },
   {
     question:

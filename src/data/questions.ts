@@ -2467,5 +2467,680 @@ export const questions: Question[] = [
       'A containerized service hosted in Amazon ECS with Amazon EC2'
     ],
     correctAnswer: [1]
+  },
+  {
+    question:
+      'You have created a VPC using the VPC Wizard with the CIDR block 100.0.0.0/16. You have selected a private subnet and VPN connection using the VPC Wizard. You have launched an EC2 instance in the private subnet. Now you need to connect to the EC2 instance via SSH. What do you need to do in order to connect to the EC2 instance?',
+    answers: [
+      'Allow inbound traffic on ports 80 and 22 to the private subnet.',
+      'Connect to the instance on the private subnet using a NAT instance.',
+      'Allow inbound traffic on port 22 on your network.',
+      'Create a public subnet and from there connect to the EC2 instance.'
+    ],
+    correctAnswer: [2]
+  },
+  {
+    question:
+      'A company wants to move its Windows file shares to Amazon FSx for Windows File Server. The shares use Active Directory groups to control access. The company wants to restrict access to shares, folders, and files in FSx using the existing Active Directory groups after moving to AWS. Which solution will meet these requirements?',
+    answers: [
+      'Create an IAM service-linked role for the FSx file system.',
+      'Create an Active Directory Connector to connect the on-premises Active Directory to AWS.',
+      'Join the FSx file system to the on-premises Active Directory.',
+      'Assign a tag to the FSx file system and map Active Directory groups to IAM groups.'
+    ],
+    correctAnswer: [2]
+  },
+  {
+    question:
+      'An application is running on an Amazon EC2 instance in VPC-A. The application needs to access files on another EC2 instance in VPC-B. VPC-A and VPC-B are in separate AWS accounts. What is the best solution to allow the EC2 instance in VPC-A to securely access the EC2 instance in VPC-B? The solution should not have a single point of failure or bandwidth bottlenecks.',
+    answers: [
+      'Set up VPC gateway endpoints for the EC2 instance in VPC-B.',
+      'Create a private virtual interface for the EC2 instance in VPC-B and add routes from VPC-A.',
+      'Set up a VPC peering connection between VPC-A and VPC-B.',
+      'Attach a virtual private gateway to VPC-B and configure routing from VPC-A.'
+    ],
+    correctAnswer: [2]
+  },
+  {
+    question:
+      'An application is running on an Amazon EC2 instance with an Elastic IP address in VPC A. The application needs access to a database in VPC B. Both VPCs are in the same AWS account. What is the most secure solution to provide the required access?',
+    answers: [
+      'Create a DB instance security group that allows all traffic from the public IP address of the application server in VPC A.',
+      'Configure a VPC peering connection between VPC A and VPC B.',
+      'Launch an EC2 instance with an Elastic IP address into VPC B and proxy all requests through it.',
+      'Make the DB instance publicly accessible and assign it a public IP address.'
+    ],
+    correctAnswer: [1]
+  },
+  {
+    question:
+      'You want to deploy an application in AWS. The application comes with an Oracle Database that needs to be installed in a separate server. The application requires that certain files be installed on the database server. You are also looking for faster performance for the database. What solution would you choose to deploy the database?',
+    answers: [
+      'Amazon EC2 with magnetic EBS volumes',
+      'Migrate the Oracle Database to DynamoDB',
+      'Amazon RDS for Oracle',
+      'Amazon EC2 with SSD-based EBS volume'
+    ],
+    correctAnswer: [3]
+  },
+  {
+    question:
+      'You are a solutions architect working for a busy media company with offices in Japan and the United States. Your production environment is hosted in both US-EAST-1 and AP-NORTHEAST-1. Your European users have been connecting to the production environment in Japan and are seeing the site in Japanese rather than in English. You need to ensure that they view the English language version. Which of the following routing policies could help you achieve this?',
+    answers: [
+      'Simple Routing',
+      'Geolocation',
+      'Weighted Routing',
+      'Failover Routing',
+      'Latency-Based Routing'
+    ],
+    correctAnswer: [1]
+  },
+  {
+    question:
+      'A company stores application log files on Amazon Linux servers. The company must keep the log files for 7 years. The log files are analyzed together by a tool. What is the most cost effective Amazon storage service for the log files?',
+    answers: [
+      'Amazon Elastic Block Store (EBS)',
+      'Amazon Elastic File System (EFS)',
+      'Amazon EC2 instance storage',
+      'Amazon S3'
+    ],
+    correctAnswer: [3]
+  },
+  {
+    question:
+      'You have a VPC with public, private, and database subnets across two Availability Zones. The EC2 instances in the private subnets need to access the RDS databases in the database subnets. What should you do to allow the EC2 instances in the private subnets to access the RDS databases in the database subnets?',
+    answers: [
+      'Create a security group for the database subnets that allows inbound traffic from the security group for the private subnets.',
+      'Create a route table for the database subnets that does not include routes to the public subnets.',
+      'Create a security group for the database subnets that denies inbound traffic from the security group for the public subnets.',
+      'Create a peering connection between the public and private subnets, and another between the private and database subnets.'
+    ],
+    correctAnswer: [0]
+  },
+  {
+    question:
+      'You are running your website behind a fleet of EC2 servers. You have designed your architecture to leverage multiple AZs, and thus your fleet of EC2 servers is hosted across different AZs. You are using EFS to provide file system access to the EC2 servers and to store all the data. You have integrated Application Load Balancer with EC2 instances, and whenever someone logs into your website, the ALB redirects the traffic to one of the EC2 servers. You deliver a lot of photos and videos via your website, and each time a user requests a photo or video, it is served via the EC2 instance. You are thinking of providing a faster turnaround time to end users and want to improve their user experience. How can you improve the existing architecture?',
+    answers: [
+      'Add more EC2 instances to the fleet.',
+      'Use a CloudFront distribution to cache all the photos and videos.',
+      'Move all the photos and videos to Amazon S3.',
+      'Move all the photos and videos to Amazon Glacier.'
+    ],
+    correctAnswer: [1]
+  },
+  {
+    question: 'How long can a message be retained in an SQS queue?',
+    answers: ['1 day', '10 days', '14 days', '7 days'],
+    correctAnswer: [2]
+  },
+  {
+    question:
+      'A company uses many Amazon EC2 instances to run an application. The application reads and writes data to an Amazon DynamoDB table. The size of the DynamoDB table keeps growing. But the application only needs data from the last 30 days. What is the most cost-effective solution with the least effort to meet these needs?',
+    answers: [
+      'Use a monitoring tool to delete old data.',
+      'Configure DynamoDB TTL to expire old data.',
+      'Redeploy the entire system every 30 days.',
+      'Use DynamoDB Streams to delete old data.'
+    ],
+    correctAnswer: [1]
+  },
+  {
+    question:
+      'A company uses a web application to provide training to employees. The application is used for 12 hours daily. The company uses an Amazon RDS MySQL database to store data. What can be done to minimize costs?',
+    answers: [
+      'Configure automatic start and stop for the RDS DB instance.',
+      'Launch an EC2 instance to start and stop RDS on a schedule.',
+      'Use Amazon ElastiCache Redis to cache data when RDS is stopped.',
+      'Use Lambda functions triggered by EventBridge to start and stop RDS.'
+    ],
+    correctAnswer: [3]
+  },
+  {
+    question:
+      'A company launched Linux servers in a private subnet in AWS. They also launched a Linux bastion host in a public subnet. An architect needs to connect from the company network to the bastion host and application servers. The security groups must allow this access. What two things should the architect do?',
+    answers: [
+      "Update the bastion host security group to allow access from the company's external IP range.",
+      "Update the bastion host security group to allow access from the company's internal IP range.",
+      'Update the application servers security group to allow SSH access from the bastion host public IP.',
+      'Update the application servers security group to allow SSH access from the bastion host private IP.'
+    ],
+    correctAnswer: [1, 3]
+  },
+  {
+    question:
+      'A company has a website hosted on AWS behind a load balancer. The load balancer handles HTTP and HTTPS requests separately. The company wants all requests to use HTTPS. What should be done to meet this requirement?',
+    answers: [
+      'Create a listener rule to redirect HTTP requests to HTTPS.',
+      'Update the network ACL of the load balancer to accept only HTTPS traffic.',
+      'Create a rule to replace HTTP with HTTPS in the URL.',
+      'Replace the load balancer with one that uses Server Name Indication for HTTPS.'
+    ],
+    correctAnswer: [0]
+  },
+  {
+    question:
+      'A company wants to move its MySQL database from their own computers to AWS. The company had a database failure before that hurt their business significantly. To prevent this from happening again, the company wants a reliable database on AWS that loses minimal data. The database should save every transaction on at least two computers. How can they achieve this?',
+    answers: [
+      'Make an Amazon RDS MySQL DB instance with Multi-AZ enabled to copy the data synchronously.',
+      'Make an Amazon RDS DB instance that copies data to three availability zones synchronously.',
+      'Use Amazon S3 to store the MySQL database files, enabling versioning for redundancy.',
+      'Deploy the MySQL database on a single EC2 instance with EBS volumes and enable EBS snapshots for backup.'
+    ],
+    correctAnswer: [0]
+  },
+  {
+    question:
+      'A company has multiple web servers that frequently need to access a common MySQL database hosted on Amazon RDS. The company wants a secure way for the web servers to connect to the database while regularly changing the user credentials. What is the best solution?',
+    answers: [
+      'Store the credentials in AWS Systems Manager OpsCenter. Give the web servers permission to access OpsCenter.',
+      'Store the credentials in an Amazon S3 bucket. Give the web servers permission to retrieve the credentials and access the database.',
+      'Store the database credentials in AWS Secrets Manager. Give the web servers permission to access Secrets Manager.',
+      'Store encrypted credentials on each web server using AWS KMS. Let each web server decrypt and access the database.'
+    ],
+    correctAnswer: [2]
+  },
+  {
+    question:
+      'A company exports a database to Amazon S3 each day. The database size is 2-5 GB. The S3 data access changes a lot and must be available immediately for 3 months. What is the most cost-effective S3 storage class meeting these needs without increasing retrieval time?',
+    answers: [
+      'S3 Intelligent-Tiering',
+      'S3 Glacier Instant Retrieval',
+      'S3 Standard-Infrequent Access (S3 Standard-IA)',
+      'S3 Standard'
+    ],
+    correctAnswer: [3]
+  },
+  {
+    question:
+      'A company stores log data in Amazon S3 buckets. The data must be encrypted while it is uploaded and stored. What should the solutions architect do to meet these requirements?',
+    answers: [
+      'Use client-side encryption to encrypt the data before uploading it to S3.',
+      'Enable encryption on the S3 buckets using AWS KMS keys.',
+      'Use server-side encryption to encrypt the data when uploading it to S3.',
+      'Create S3 bucket policies to enforce server-side encryption with S3 keys.'
+    ],
+    correctAnswer: [2]
+  },
+  {
+    question:
+      "When you define a CIDR block with a IP address range, you can't use all the IP addresses. AWS reserves a few IP addresses for its own networking purpose. How many IP addresses does AWS reserve?",
+    answers: ['2', '3', '5', '4'],
+    correctAnswer: [2]
+  },
+  {
+    question:
+      'An application runs on an Amazon EC2 instance inside a VPC. The application processes logs stored in an Amazon S3 bucket. The EC2 instance needs to access the S3 bucket without internet connectivity. What should be done to provide private network connectivity from the EC2 instance to the S3 bucket?',
+    answers: [
+      'Create a gateway VPC endpoint to the S3 bucket.',
+      'Create an Amazon API Gateway API with a private link to the S3 endpoint.',
+      'Stream the logs to Amazon CloudWatch Logs and export them to the S3 bucket.',
+      'Create an instance profile on Amazon EC2 to allow S3 access.'
+    ],
+    correctAnswer: [0]
+  },
+  {
+    question:
+      'A company runs a website on Amazon EC2 instances. Users upload images to the website. The website resizes images before storing them in Amazon S3. Users experience slow image uploads. The company wants to improve website performance and reduce coupling in the application. What two things should the solutions architect do to meet these requirements?',
+    answers: [
+      'Schedule AWS Lambda functions using EventBridge to periodically resize uploaded images.',
+      "Configure the application to upload original images directly from the user's browser to Amazon S3 using pre-signed URLs.",
+      'Use AWS Lambda functions triggered by S3 events to resize images after upload.',
+      'Configure the web server to upload resized images to Amazon S3.'
+    ],
+    correctAnswer: [1, 2]
+  },
+  {
+    question:
+      "A company has a dynamic web application running on two Amazon EC2 instances. The application uses the company's own SSL certificate on each instance for SSL encryption and decryption. There has been an increase in traffic to the application recently. The operations team found that the SSL encryption and decryption is using up the maximum compute capacity of the web servers. What should be done to increase the application's performance?",
+    answers: [
+      'Create another EC2 instance as a proxy server. Migrate the SSL certificate to the new instance and configure it to direct connections to the existing instances.',
+      'Import the SSL certificate into AWS Certificate Manager (ACM). Create an Application Load Balancer with an HTTPS listener that uses the ACM SSL certificate.',
+      'Create a new SSL certificate using AWS Certificate Manager (ACM) and install it on each EC2 instance.',
+      'Create an Amazon S3 bucket, migrate the SSL certificate to it, and configure the EC2 instances to reference the bucket for SSL termination.'
+    ],
+    correctAnswer: [1]
+  },
+  {
+    question:
+      'An application uses Amazon EC2 instances in multiple Availability Zones behind an Application Load Balancer. The application works best when the CPU use of the EC2 instances is around 40%. What should be done to maintain the desired performance across all instances?',
+    answers: [
+      'Use a target tracking policy to dynamically adjust the number of instances.',
+      'Schedule scaling actions to increase and decrease the number of instances.',
+      'Use a simple scaling policy to dynamically adjust the number of instances.',
+      'Use an AWS Lambda function to update the number of instances.'
+    ],
+    correctAnswer: [0]
+  },
+  {
+    question:
+      "You have developed an application that runs on EC2 servers. The application needs to run 24/7 throughout the year. The application is critical for business, so the performance can't go down. At the same time, you are looking at the best possible way to optimize your costs. What should be your approach?",
+    answers: [
+      'Use a spot instance to get the maximum pricing advantage.',
+      'Use EC2 via On Demand and shut down the EC2 instance during the night when no one is using it.',
+      'Use a reserved instance for one year.',
+      'Use EC2 via On Demand and shut down the EC2 instance during the weekends.'
+    ],
+    correctAnswer: [2]
+  },
+  {
+    question:
+      'A solutions architect created a new AWS account. They must secure access to the AWS account root user. What two actions will accomplish this?',
+    answers: [
+      'Enable multi-factor authentication for the root user.',
+      'Add the root user to a group with admin permissions.',
+      'Use a strong password for the root user.',
+      'Store root user access keys in an encrypted Amazon S3 bucket.'
+    ],
+    correctAnswer: [0, 2]
+  },
+  {
+    question:
+      'You are developing an application and have associated an Elastic IP (EIP) with the application tier that is an EC2 instance. Since you are in the development cycle, you have to frequently stop and start the application server. What is going to happen to the EIP when you start/stop the application server?',
+    answers: [
+      'After shutdown of the EC2 instance, the EIP is released from your account and you have to request it again before you can use it.',
+      'Every time the EC2 instance is stopped, the EIP is disassociated, and you must manually attach it whenever the instance is started again.',
+      'Every time the EC2 instance is stopped, the EIP is disassociated and a new EIP is associated when you start the instance.',
+      'Even after the shutdown, the EIP remains associated with the instance, so no action needed.'
+    ],
+    correctAnswer: [3]
+  },
+  {
+    question:
+      'A company needs to check its AWS Cloud setup. The company wants to make sure no one makes unauthorized changes to its Amazon S3 buckets. What should a solutions architect do to meet this goal?',
+    answers: [
+      'Turn on Amazon Inspector with the right assessment template.',
+      'Turn on AWS Config with the right rules.',
+      'Turn on AWS Trusted Advisor with the right checks.',
+      'Turn on Amazon S3 server access logging. Set up Amazon EventBridge (Amazon CloudWatch Events).'
+    ],
+    correctAnswer: [1]
+  },
+  {
+    question:
+      'A company moved its data warehouse to AWS and has a Direct Connect link. Office users query the data warehouse and get 50MB results. Webpages are 500KB. Result sets are not cached. Which option gives the lowest data transfer cost from AWS?',
+    answers: [
+      'Host the visualization tool on-premises and query the warehouse over the internet.',
+      'Host the tool on-premises and query over Direct Connect in the same Region.',
+      'Host the tool in the same Region and access over Direct Connect in the same Region.',
+      'Host the visualization tool in the same Region as the warehouse and access over the internet.'
+    ],
+    correctAnswer: [2]
+  },
+  {
+    question:
+      'A company wants to provide fast download speeds for its historical performance reports globally. It needs a cost-effective solution that provisions infrastructure on-demand and scales automatically based on usage. Which AWS services should be used?',
+    answers: [
+      'Application Load Balancer with Amazon EC2 Auto Scaling',
+      'AWS Lambda and Amazon DynamoDB',
+      'Amazon CloudFront and Amazon S3',
+      'Amazon Route 53 with internal Application Load Balancers'
+    ],
+    correctAnswer: [2]
+  },
+  {
+    question:
+      'A company is launching a new application on AWS. The application uses a load balancer to direct traffic to Amazon EC2 instances. The EC2 instances are in an Auto Scaling group. The company needs separate development and production environments. The production environment will have periods of high traffic. What is the most cost-effective way to configure the development environment?',
+    answers: [
+      'Use smaller EC2 instances in both environments.',
+      'Have only one EC2 instance as a target in the development environment.',
+      'Change the load balancer algorithm to least outstanding requests.',
+      'Reduce the maximum number of EC2 instances allowed in the development Auto Scaling group.'
+    ],
+    correctAnswer: [3]
+  },
+  {
+    question:
+      'A company has two applications. One application sends messages with data to process. The other application receives and processes the messages. The company wants to use an AWS service for sending messages between the applications. The sender application can send about 1000 messages per hour. It can take up to 2 days to process the messages. If processing fails, the messages must be retained. This should not impact the processing of other messages. Which AWS service meets these requirements in the most efficient way?',
+    answers: [
+      'Use an Amazon Kinesis data stream to receive messages. Integrate the processor with the Kinesis Client Library.',
+      'Set up an Amazon EC2 instance running Redis to store, process and delete messages.',
+      'Subscribe the processor to an Amazon SNS topic. Integrate the sender to the SNS topic.',
+      'Use an Amazon SQS queue. Configure a dead-letter queue to collect failed messages.'
+    ],
+    correctAnswer: [3]
+  },
+  {
+    question:
+      'Which of the following are valid Route 53 routing policies? (Choose three)',
+    answers: ['Complex', 'Shortest First', 'Weighted', 'Latency', 'Simple'],
+    correctAnswer: [2, 3, 4]
+  },
+  {
+    question:
+      'You are developing a small application through which users can register for events. As a part of the registration process, you want to send a one-time text message confirming registration. Your management wants to make sure you spend the least amount of money possible in this effort. Which AWS service should you be using to do this?',
+    answers: [
+      'Amazon SNS',
+      'AWS STS',
+      'Amazon SQS',
+      'Use an EC2 instance and configure sending the text notification from there'
+    ],
+    correctAnswer: [0]
+  },
+  {
+    question:
+      "The company's Customer Experience manager comes to see you about some odd behavior with the ticketing system: messages presented to the support team are not arriving in the order in which they were generated. You know that this is due to the way the underlying SQS standard queue service is being used to manage messages. Which of the following are correct explanations? (Choose two)",
+    answers: [
+      'SQS uses multiple hosts, and each host holds only a portion of all the messages. When a staff member calls for their next message, the consumer process does not see all the hosts or all the messages. As such, messages are not necessarily delivered in the order in which they were generated.',
+      'The support staff is probably using the provided admin tools to amend the priority in the SQS queue based on their experience and insights about the issues.',
+      'As the SQS service gets busy, some of the hosts will automatically swap from FIFO to LIFO to provide a better work load balance and clearance rate.',
+      'If an agent abandons a message or takes a break before finishing with a message, it will be offered in the queue again. In order to ensure that no message is lost, a message will persist in the SQS queue until it is processed successfully.',
+      'SQS has been set up to prioritize messages in the queue based on keywords.'
+    ],
+    correctAnswer: [0, 3]
+  },
+  {
+    question:
+      'A company is using Amazon CloudFront to deliver content from its website. The company enabled logging on the CloudFront distribution. The logs are saved in an Amazon S3 bucket owned by the company. The company wants to perform advanced analysis on the logs and build visualizations. What should the solutions architect recommend to meet these requirements?',
+    answers: [
+      'Use standard SQL queries in Amazon Athena to analyze the CloudFront logs in the S3 bucket. Visualize the results with AWS Glue.',
+      'Use standard SQL queries in Amazon DynamoDB to analyze the CloudFront logs in the S3 bucket. Visualize the results with Amazon QuickSight.',
+      'Use standard SQL queries in Amazon Athena to analyze the CloudFront logs in the S3 bucket. Visualize the results with Amazon QuickSight.',
+      'Use standard SQL queries in Amazon DynamoDB to analyze the CloudFront logs in the S3 bucket. Visualize the results with AWS Glue.'
+    ],
+    correctAnswer: [2]
+  },
+  {
+    question:
+      'A team receives files in an S3 bucket daily. The team manually copies files to another S3 bucket for analysis. More and larger files are now being sent. The team wants to automatically copy files and run code on them using Lambda when files arrive. They also want to send files to a SageMaker pipeline. What is the best way to meet these needs with the least overhead?',
+    answers: [
+      'Use Lambda to copy files and send S3 notifications to Lambda and SageMaker.',
+      'Send S3 notifications to EventBridge and target Lambda and SageMaker.',
+      'Use S3 replication and send S3 notifications to Lambda and SageMaker.',
+      'Use S3 replication and send S3 notifications to EventBridge targeting Lambda and SageMaker.'
+    ],
+    correctAnswer: [1]
+  },
+  {
+    question:
+      'A large media company hosts a web application on AWS. The company wants to start storing confidential media files in caches so users around the world can reliably access the files. The content is stored in Amazon S3 buckets. How can the company deliver the content quickly to users globally?',
+    answers: [
+      'Use AWS DataSync to connect the S3 buckets to the web application.',
+      'Deploy Amazon CloudFront to connect the S3 buckets to CloudFront edge servers.',
+      'Deploy AWS Global Accelerator to connect the S3 buckets to the web application.',
+      'Use Amazon Simple Queue Service (SQS) to connect the S3 buckets to the web application.'
+    ],
+    correctAnswer: [1]
+  },
+  {
+    question:
+      'A company uses AWS Organizations to manage accounts. The company wants to ensure future account notifications go to administrators, not root users. What should they do?',
+    answers: [
+      'Forward root user emails to all users.',
+      'Configure account alternate contacts.',
+      'Use same root user email for all accounts.',
+      'Forward root user emails to one administrator.'
+    ],
+    correctAnswer: [1]
+  },
+  {
+    question:
+      "A company is moving its database from its own computers to Amazon Aurora. The database on the company's own computers must stay available while it is moved to Amazon Aurora. The Amazon Aurora database must stay synchronized with the database on the company's own computers. What two steps can they do to achieve these goals?",
+    answers: [
+      'Create an ongoing replication process between the two databases.',
+      "Make a backup copy of the database on the company's own computers.",
+      'Perform a cut-over migration, shutting down the original database while transferring data to Amazon Aurora.',
+      'Use Amazon S3 to store database snapshots, and update Amazon Aurora manually.'
+    ],
+    correctAnswer: [0, 1]
+  },
+  {
+    question:
+      'A company needs to store contract documents for 5 years. The documents cannot be overwritten or deleted during this time. The company wants to encrypt the documents and automatically rotate the encryption keys every year. Which two steps should be taken to meet these requirements with the least operational overhead?',
+    answers: [
+      'Store the documents in Amazon S3 using S3 Object Lock in governance mode.',
+      'Store the documents in Amazon S3 using S3 Object Lock in compliance mode.',
+      'Use server-side encryption with Amazon S3 managed encryption keys (SSE-S3) and configure key rotation.',
+      'Use server-side encryption with AWS KMS customer managed keys and configure key rotation.'
+    ],
+    correctAnswer: [0, 1]
+  },
+  {
+    question:
+      'You just deployed a three-tier architecture in AWS. The web tier is in the public subnet and the application and database tiers are in the private subnet. You need to download some OS updates for the application. You want a permanent solution for doing this, and it should be highly available. What is the best way to achieve your goal?',
+    answers: [
+      'Use a NAT gateway.',
+      'Use a VPC endpoint.',
+      'Use an Internet gateway.',
+      'Use a NAT instance.'
+    ],
+    correctAnswer: [0]
+  },
+  {
+    question:
+      'You are designing a storage solution for a publishing company. The publishing company stores a lot of documents in Microsoft Word and in PDF format. The solution you are designing should be able to provide document-sharing capabilities so that anyone who is authorized can access the files and use the versioning capability. This way, the application can maintain several versions of the same file at any point in time. Which AWS service meets this requirement?',
+    answers: ['Amazon EBS', 'Amazon S3', 'Amazon RDS', 'Amazon EFS'],
+    correctAnswer: [1]
+  },
+  {
+    question:
+      'An ecommerce company stores 300 MB of analytics data per month in JSON format in the AWS Cloud. The data must be accessible within milliseconds if needed, and retained for 30 days. What is the most cost-effective solution to back up this data?',
+    answers: [
+      'Amazon S3 Glacier',
+      'Amazon RDS for PostgreSQL',
+      'Amazon OpenSearch Service',
+      'Amazon S3 Standard'
+    ],
+    correctAnswer: [3]
+  },
+  {
+    question:
+      'A company implemented a self-managed DNS solution on 3 Amazon EC2 instances behind a Network Load Balancer in the us-west-2 Region. Most users are in the US and Europe. The company launched 3 EC2 instances in eu-west-1 and added them as targets to a new Network Load Balancer. What can the company use to route traffic to all EC2 instances?',
+    answers: [
+      'Create a Route 53 geolocation routing policy to route to one of the 2 Network Load Balancers. Use it as origin for a CloudFront distribution.',
+      'Create a Global Accelerator standard accelerator. Create endpoint groups in us-west-2 and eu-west-1. Add the 2 Network Load Balancers as endpoints.',
+      'Replace the 2 Network Load Balancers with 2 Application Load Balancers. Create a Route 53 latency routing policy to route to one. Use it as origin for a CloudFront distribution.',
+      'Attach Elastic IPs to the 6 EC2 instances. Create a Route 53 geolocation routing policy to route to the instances. Use it as origin for a CloudFront distribution.'
+    ],
+    correctAnswer: [1]
+  },
+  {
+    question:
+      'A company needs a highly available database for a critical application running on Amazon EC2. The database should automatically failover if there is a disruption. What is the best solution to meet these requirements?',
+    answers: [
+      'Launch an EC2 instance in one Availability Zone. Install the database. Back up with an AMI. Use CloudFormation to recreate the instance if disrupted.',
+      'Launch two EC2 instances in different Availability Zones in one Region. Install the database on both instances. Configure the instances as a cluster with database replication.',
+      'Launch EC2 instances in two different Regions. Install the database in both Regions. Set up database replication. Fail over between Regions.',
+      'Launch an EC2 instance in a single Availability Zone. Install the database and use EC2 Auto Scaling to automatically replace the instance if disrupted.'
+    ],
+    correctAnswer: [1]
+  },
+  {
+    question:
+      'A company needs to send text messages to its app users. The users must reply to the messages. The company wants to store the replies for one year. What should the company use to meet these needs?',
+    answers: [
+      'Use Amazon Connect to send the messages, and Lambda functions to process the replies.',
+      'Use Amazon SNS to send the messages, and subscribe an Amazon Kinesis stream to store the replies.',
+      'Build an Amazon Pinpoint journey to send the messages, and send reply events to a Kinesis stream.',
+      'Use Amazon SQS to distribute the messages, and Lambda functions to process the replies.'
+    ],
+    correctAnswer: [0]
+  },
+  {
+    question:
+      'A company wants to move a Python application that processes JSON documents to AWS Cloud. The application runs thousands of times daily. The company needs a solution that is highly available, maximizes scalability, and minimizes overhead. What is the best solution?',
+    answers: [
+      'Send JSON to SQS queue, run Python in ECS cluster to process messages, save results to RDS DB instance.',
+      'Store JSON in S3 bucket, run Python code on EC2 instances to process, save results to Aurora DB cluster.',
+      'Store JSON on EBS volume, attach to EC2 instances to process, save results to RDS DB instance.',
+      'Store JSON in S3 bucket, use Lambda function to run Python code when documents arrive, save results to Aurora DB cluster.'
+    ],
+    correctAnswer: [3]
+  },
+  {
+    question:
+      'A company needs a solution to record and analyze customer calls. The solution must recognize multiple speakers on calls and create text transcripts of the calls. The transcripts must be stored for 7 years. Which AWS service combination meets these needs?',
+    answers: [
+      'Use Amazon Comprehend for speaker recognition. Use Amazon Kinesis Data Firehose to create transcripts and store them in Amazon Elasticsearch for analysis.',
+      'Use Amazon Rekognition for speaker recognition. Use Amazon Translate to create transcripts. Store transcripts in Amazon Redshift and analyze with SQL queries.',
+      'Use Amazon Transcribe for speaker recognition and transcript creation. Store transcripts in Amazon S3 for long-term storage. Use Amazon Athena to analyze the transcripts.',
+      'Use Amazon Rekognition for speaker recognition. Use Amazon Textract to analyze transcripts stored in Amazon S3.'
+    ],
+    correctAnswer: [2]
+  },
+  {
+    question:
+      'You are running a highly available application in AWS. The business indicates that it needs a very performant file system that can be shared across EC2 servers (web servers). Which AWS service can solve this problem?',
+    answers: [
+      'Amazon EFS',
+      'Amazon S3',
+      'Amazon EBS',
+      'Amazon EC2 Instance Store'
+    ],
+    correctAnswer: [0]
+  },
+  {
+    question:
+      "When editing permissions (policies and ACLs), creating S3 buckets, and performing activities with EC2 instances, to whom does 'Owner' generally refer in the context of AWS?",
+    answers: [
+      'Owner is the IAM role used to create the object via the GUI, CLI, or API.',
+      'Owner refers to the root account.',
+      'Owner is the IAM user who created the object via the GUI, CLI, or API.',
+      "There is no special concept of 'Owner' in AWS."
+    ],
+    correctAnswer: [1]
+  },
+  {
+    question:
+      'A company migrated a 3-tier application to Amazon VPC. The security team found the principle of least privilege was not followed for security group rules between application tiers. What should be done to fix this?',
+    answers: [
+      'Use security group IDs in security group rules.',
+      'Use instance IDs in security group rules.',
+      'Use subnet CIDR blocks in security group rules.',
+      'Use VPC CIDR blocks in security group rules.'
+    ],
+    correctAnswer: [0]
+  },
+  {
+    question:
+      "A company's process for bringing in new data sometimes fails because of network connection issues. When this happens, the new data is not processed unless the company manually runs the process again. What should be done to make sure all data notifications are eventually processed?",
+    answers: [
+      'Implement a caching mechanism to store the data notifications temporarily.',
+      'Deploy the processing function across multiple Availability Zones.',
+      'Configure the retry settings to increase the number of retries and the wait time between retries.',
+      'Increase the CPU and memory resources for the data processing function.'
+    ],
+    correctAnswer: [2]
+  },
+  {
+    question:
+      'A company has an application that runs on Amazon EC2 instances. The application reads data from an Amazon SQS queue and processes the messages in parallel. The message volume changes unpredictably and often has bursts of traffic. The application should process messages without downtime. What is the most cost-effective solution to meet these requirements?',
+    answers: [
+      'Use Spot Instances only to handle maximum capacity.',
+      'Use Reserved Instances only to handle maximum capacity.',
+      'Use Reserved Instances for baseline capacity and On-Demand Instances for additional capacity.',
+      'Use Reserved Instances for baseline capacity and Spot Instances for additional capacity.'
+    ],
+    correctAnswer: [3]
+  },
+  {
+    question:
+      'A company is building a new web application that uses Amazon EC2 instances and an Amazon Aurora database. The application data must be encrypted when stored and while moving between services. What should the company do to meet these encryption requirements?',
+    answers: [
+      'Use BitLocker to encrypt data at rest and import encryption keys to AWS KMS to encrypt data in transit.',
+      'Use the AWS root account to enable encryption for all data at rest and in transit.',
+      'Use AWS Key Management Service (AWS KMS) to encrypt data at rest and AWS Certificate Manager (ACM) certificates to encrypt data in transit.',
+      'Use AWS Certificate Manager (ACM) to encrypt data at rest and AWS KMS to encrypt data in transit.'
+    ],
+    correctAnswer: [2]
+  },
+  {
+    question:
+      'A company sells ringtones made from clips of popular songs. The ringtones files are stored in Amazon S3 Standard and are at least 128 KB in size. The company has millions of files, but downloads are rare for ringtones older than 90 days. The company wants to save money on storage while keeping the most accessed files available for users. What should the company do to meet these requirements in the most cost-effective way?',
+    answers: [
+      'Configure S3 Standard-Infrequent Access (S3 Standard-IA) as the initial storage tier for the objects.',
+      'Implement an S3 lifecycle policy to move objects from S3 Standard to S3 Standard-Infrequent Access (S3 Standard-IA) after 90 days.',
+      'Move the files to S3 Intelligent-Tiering and configure it to move objects to a cheaper tier after 90 days.',
+      'Use S3 inventory to manage objects and move them to S3 Standard-Infrequent Access (S3 Standard-IA) after 90 days.'
+    ],
+    correctAnswer: [1]
+  },
+  {
+    question:
+      'A company stores confidential audit documents in an Amazon S3 bucket. The bucket uses policies to restrict access to authorized users. The company wants a more secure way to prevent accidental deletion of documents. What should be done?',
+    answers: [
+      'Enable versioning and MFA Delete on the S3 bucket.',
+      'Enable MFA on the audit team IAM user accounts.',
+      'Add a Lifecycle policy to deny delete access during audits.',
+      'Encrypt the bucket with AWS KMS and restrict access to the key.'
+    ],
+    correctAnswer: [0]
+  },
+  {
+    question:
+      'A company needs to keep application log files for 10 years for a critical application. The application team needs to access logs from the past month often for troubleshooting. But they rarely need logs older than 1 month. The application creates more than 10 TB of logs every month.',
+    answers: [
+      'Store the logs in Amazon S3. Use S3 Lifecycle policies to move logs older than 1 month to S3 Glacier Deep Archive.',
+      'Store the logs in Amazon CloudWatch Logs. Use AWS Backup to move logs older than 1 month to S3 Glacier Deep Archive.',
+      'Store the logs in Amazon S3. Use AWS Backup to move logs older than 1 month to S3 Glacier.',
+      'Store the logs in Amazon CloudWatch Logs. Use Amazon S3 Lifecycle policies to move logs older than 1 month to S3 Glacier Deep Archive.'
+    ],
+    correctAnswer: [0]
+  },
+  {
+    question:
+      'A bicycle company wants to track the location of its bikes during busy hours. It needs a system to store and access the location data through an API. What AWS service should the company use for this?',
+    answers: [
+      'Amazon API Gateway with AWS Lambda',
+      'Amazon QuickSight with Amazon Redshift',
+      'Amazon Athena with Amazon S3',
+      'Amazon API Gateway with Amazon Kinesis Data Analytics'
+    ],
+    correctAnswer: [0]
+  },
+  {
+    question:
+      'You are a web developer and just want to focus on writing code. You want to quickly deploy and manage applications in the AWS Cloud without worrying about the infrastructure that runs those applications. At the same time, you are looking for optimal performance. Which service should you choose for this?',
+    answers: [
+      'Use AWS CloudFormation template.',
+      'Create a few servers in EC2 and deploy your application in them.',
+      'Use Elastic Beanstalk.',
+      'Use Amazon S3.'
+    ],
+    correctAnswer: [2]
+  },
+  {
+    question:
+      'A company uses Amazon EC2 instances to process orders from clients. The EC2 instances store the orders in an Amazon RDS database. Sometimes the system fails and orders must be reprocessed. The company wants a solution to automatically process orders if an outage happens. What should be done?',
+    answers: [
+      'Move the EC2 instances into an Auto Scaling group. Use EventBridge to target an ECS task to process orders.',
+      'Use Amazon SNS and Lambda. Send orders to an SNS topic. Have a Lambda function subscribed to the topic send orders to the EC2 instances.',
+      'Move the EC2 instances into an Auto Scaling group behind a load balancer. Update the order system to send to the load balancer.',
+      'Move the EC2 instances into an Auto Scaling group. Configure the order system to send orders to an Amazon SQS queue. Have the EC2 instances get orders from the queue.'
+    ],
+    correctAnswer: [3]
+  },
+  {
+    question:
+      'A solutions architect created two IAM policies: Policy1 and Policy2. Both policies are attached to an IAM group. A cloud engineer was added to the IAM group as an IAM user. Which action will the cloud engineer be able to perform?',
+    answers: [
+      'Deleting IAM users',
+      'Deleting Amazon EC2 instances',
+      'Deleting directories',
+      'Deleting logs from Amazon CloudWatch Logs'
+    ],
+    correctAnswer: [1]
+  },
+  {
+    question:
+      "You are using the Virginia region as your primary data center for hosting AWS services. You don't use any other region as of now, but you want to keep yourself ready for any disaster. During any disaster, you should be able to deploy your infrastructure like your primary region in a matter of minutes. Which AWS service should you use?",
+    answers: [
+      'Amazon CloudWatch',
+      'Amazon EC2 AMIs with EBS snapshots',
+      'AWS CloudFormation',
+      'Amazon Elastic Beanstalk'
+    ],
+    correctAnswer: [2]
+  },
+  {
+    question:
+      "Your company has just purchased another company. As part of the merger, your team has been instructed to cross-connect the corporate networks. You run all your confidential corporate services and internal DNS in a VPC. The merged company has all its confidential corporate services and internal DNS on the premises. After establishing a Direct-Connect service between your VPC and the other company's on-premises network and confirming all the routing, firewalls, and authentication, you find that although you can resolve names against the other company's DNS, the other company's services are unable to resolve names against your DNS servers. Why might this be?",
+    answers: [
+      'You cannot use DNS in this way. You need to merge the zones under a parent zone registered with ICANN.',
+      'AWS Route 53 is an Internet service, and the other company needs to perform lookups and zone transfers via the Internet, not the Direct-Connect link.',
+      'Route 53 is not an industry-standard DNS service, and zone transfers and name resolution must be done via a proprietary API.',
+      'By design, AWS DNS does not respond to requests originating from outside the VPC.',
+      'The computers are not configured properly. You need to add the IP address of the AWS DNS servers into the DNS options of the IP stack.'
+    ],
+    correctAnswer: [3]
   }
 ]

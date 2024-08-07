@@ -1766,7 +1766,7 @@ export const questions: Question[] = [
       'Configure an Amazon CloudWatch Logs export for the DB cluster.',
       'Use AWS Backup to take the backups and to keep the backups for 5 years.'
     ],
-    correctAnswer: [0, 4]
+    correctAnswer: [3, 4]
   },
   {
     question:

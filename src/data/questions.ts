@@ -3152,7 +3152,7 @@ export const questions: Question[] = [
       'Move the application to EC2 Reserved Instances. Move the database to Aurora Reserved Instances.',
       'Move the application to EC2 Reserved Instances. Move the database to RDS On-Demand Instances.'
     ],
-    correctAnswer: [0]
+    correctAnswer: [2]
   },
   {
     question:

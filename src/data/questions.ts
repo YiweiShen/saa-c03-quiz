@@ -2848,7 +2848,7 @@ export const questions: Question[] = [
       'Use S3 replication and send S3 notifications to Lambda and SageMaker.',
       'Use S3 replication and send S3 notifications to EventBridge targeting Lambda and SageMaker.'
     ],
-    correctAnswer: [1]
+    correctAnswer: [3]
   },
   {
     question:

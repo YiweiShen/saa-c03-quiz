@@ -3635,7 +3635,7 @@ export const questions: Question[] = [
       'Use an IAM role to restrict users from changing or deleting objects, and an S3 bucket policy to allow only that IAM role.',
       'Configure an AWS Lambda function triggered by new objects to track hashes so modified objects can be marked.'
     ],
-    correctAnswer: [0]
+    correctAnswer: [1]
   },
   {
     question:

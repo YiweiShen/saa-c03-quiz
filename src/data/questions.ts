@@ -2892,7 +2892,7 @@ export const questions: Question[] = [
       'Use server-side encryption with Amazon S3 managed encryption keys (SSE-S3) and configure key rotation.',
       'Use server-side encryption with AWS KMS customer managed keys and configure key rotation.'
     ],
-    correctAnswer: [0, 1]
+    correctAnswer: [1, 3]
   },
   {
     question:

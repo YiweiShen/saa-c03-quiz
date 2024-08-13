@@ -3471,7 +3471,7 @@ export const questions: Question[] = [
       'Set up Amazon FSx for Windows File Server in AWS. Move the office files there. Update systems to use FSx.',
       'Set up FSx for Windows in AWS. Set up an FSx File Gateway in the office. Move office files to the gateway. Configure AWS systems for FSx and office systems for the gateway.'
     ],
-    correctAnswer: [2]
+    correctAnswer: [3]
   },
   {
     question:

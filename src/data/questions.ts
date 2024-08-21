@@ -1274,7 +1274,7 @@ export const questions: Question[] = [
       'Order an AWS Snowball Edge Storage Optimized device. Copy the data to the device. Create a custom transformation job by using AWS Glue.',
       'Order an AWS Snowball Edge Storage Optimized device that includes Amazon EC2 compute. Copy the data to the device. Create a new EC2 instance on AWS to run the transformation application.'
     ],
-    correctAnswer: [3]
+    correctAnswer: [2]
   },
   {
     question:

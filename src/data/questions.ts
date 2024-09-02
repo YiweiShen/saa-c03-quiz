@@ -3242,7 +3242,7 @@ export const questions: Question[] = [
       'Use Amazon SQS for job queueing and Auto Scaling group for compute nodes. Scale based on queue size.',
       'Use Auto Scaling group for primary server and compute nodes. Use EventBridge for job queueing. Scale based on compute node load.'
     ],
-    correctAnswer: [1]
+    correctAnswer: [2]
   },
   {
     question:

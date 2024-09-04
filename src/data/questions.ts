@@ -3246,17 +3246,6 @@ export const questions: Question[] = [
   },
   {
     question:
-      'A company has a web application running on Amazon EC2 instances behind an Application Load Balancer. The application uses an Amazon Aurora database. The company needs a disaster recovery solution that can tolerate up to 30 minutes of downtime and data loss. The solution does not need to handle traffic when the primary system is healthy. What should be done to meet these requirements?',
-    answers: [
-      'Deploy a scaled-down version of the application in a second AWS Region. Use Route 53 for active-active failover. Create an Aurora Replica in the second Region.',
-      'Replicate the primary infrastructure in a second AWS Region. Use Route 53 for active-active failover. Create an Aurora database restored from the latest snapshot.',
-      'Use AWS Backup to back up the data. Restore the backup in a second AWS Region to create the infrastructure. Use Route 53 for active-passive failover. Create a second Aurora primary instance in the second Region.',
-      'Deploy the application and infrastructure in a second AWS Region. Use Route 53 for active-passive failover. Create an Aurora Replica in the second Region.'
-    ],
-    correctAnswer: [2]
-  },
-  {
-    question:
       'A company needs to back up a DynamoDB table every month. The backups must be kept for 6 months and available for restore. After 6 months, the backups must be retained but moved to cold storage. How can the company meet these requirements?',
     answers: [
       'Write a script to create monthly backups. Write another script to transition and delete backups after 6 and 7 months.',

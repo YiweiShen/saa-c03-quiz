@@ -3085,7 +3085,7 @@ export const questions: Question[] = [
       'Amazon Athena with Amazon S3',
       'Amazon API Gateway with Amazon Kinesis Data Analytics'
     ],
-    correctAnswer: [0]
+    correctAnswer: [3]
   },
   {
     question:

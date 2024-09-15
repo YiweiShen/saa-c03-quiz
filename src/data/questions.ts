@@ -2604,7 +2604,7 @@ export const questions: Question[] = [
       'Update the application servers security group to allow SSH access from the bastion host public IP.',
       'Update the application servers security group to allow SSH access from the bastion host private IP.'
     ],
-    correctAnswer: [1, 3]
+    correctAnswer: [0, 3]
   },
   {
     question:

@@ -3646,7 +3646,7 @@ export const questions: Question[] = [
       "Configure a NAT instance within your VPC. Create a route via the NAT and associate it with all private subnets within your VPC. Create a Route 53 'A' record to point to the public IP address of the NAT.",
       "Set up an Elastic Load Balancer and place your two web servers behind it in different Availability Zones. Configure a Route 53 'A' record to point to the IP address of the Elastic Load Balancer."
     ],
-    correctAnswer: [0, 1]
+    correctAnswer: [0, 3]
   },
   {
     question:

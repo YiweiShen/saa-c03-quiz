@@ -3436,7 +3436,7 @@ export const questions: Question[] = [
       'Set up AWS Shield in both Regions. Associate Shield rules with API stages.',
       'Set up AWS WAF in both Regions. Associate WAF rules with API stages.'
     ],
-    correctAnswer: [3]
+    correctAnswer: [0]
   },
   {
     question:

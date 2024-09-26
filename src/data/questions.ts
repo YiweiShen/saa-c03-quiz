@@ -330,7 +330,7 @@ export const questions: Question[] = [
       'Create a snapshot when tests are completed. Terminate the DB instance and restore the snapshot when required.',
       'Modify the DB instance to a low-capacity instance when tests are completed. Modify the DB instance again when required.'
     ],
-    correctAnswer: [0]
+    correctAnswer: [2]
   },
   {
     question:

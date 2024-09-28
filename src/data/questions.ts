@@ -1207,7 +1207,7 @@ export const questions: Question[] = [
       'Use Amazon QuickSight with Amazon Redshift.',
       'Use Amazon API Gateway with Amazon Kinesis Data Analytics.'
     ],
-    correctAnswer: [1]
+    correctAnswer: [3]
   },
   {
     question:

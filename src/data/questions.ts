@@ -3391,7 +3391,7 @@ export const questions: Question[] = [
       'Extend to Amazon FSx for Windows File Server Multi-AZ and migrate data.',
       'Migrate data to Amazon S3 and set up IAM authentication for users.'
     ],
-    correctAnswer: [0]
+    correctAnswer: [2]
   },
   {
     question: 'With EBS, you can do which of the following? (Select two)',

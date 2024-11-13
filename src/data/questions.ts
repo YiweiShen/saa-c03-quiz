@@ -3110,8 +3110,44 @@ export const questions: Question[] = [
     correctAnswer: [3]
   },
   {
-    question:
-      'A solutions architect created two IAM policies: Policy1 and Policy2. Both policies are attached to an IAM group. A cloud engineer was added to the IAM group as an IAM user. Which action will the cloud engineer be able to perform?',
+    question: `A solutions architect created two IAM policies: Policy1 and Policy2.
+
+      Policy1:
+        {
+            "Version": "2012-10-17",
+            "Statement": [
+                {
+                    "Effect": "Allow",
+                    "Action": [
+                        "iam:Get*",
+                        "iam:List*",
+                        "kms:List*",
+                        "ec2:*",
+                        "ds:*",
+                        "logs:Get*",
+                        "logs:Describe*"
+                    ],
+                    "Resource": "*"
+                }
+            ]
+        }
+
+        Policy2:
+        {
+            "Version": "2012-10-17",
+            "Statement": [
+                {
+                    "Effect": "Deny",
+                    "Action": [
+                        "ds:Delete*",
+                    ],
+                    "Resource": "*"
+                }
+            ]
+        }
+
+
+      Both policies are attached to an IAM group. A cloud engineer was added to the IAM group as an IAM user. Which action will the cloud engineer be able to perform?`,
     answers: [
       'Deleting IAM users',
       'Deleting Amazon EC2 instances',

@@ -3569,7 +3569,7 @@ export const questions: Question[] = [
       'A company has a three-level application for sharing images. The application uses Amazon EC2 instances for the front-end, application, and database layers. A solutions architect must design a scalable and highly available solution with the least changes to the application. What should the architect do?',
     answers: [
       'Use AWS CloudFront for the front-end, Amazon SQS for the application layer, and Amazon Redshift for the database.',
-      'Use Elastic Beanstalk with load balancing and multiple Availability Zones for the front-end and application layers. Use RDS with read replicas for the database and to serve images.',
+      'Use Elastic Beanstalk with load balancing and multiple Availability Zones for the front-end and application layers. Use RDS with read replicas for the database and s3 to serve images.',
       'Use S3 for the front-end, an Auto Scaling group of EC2 instances for the application layer, and a memory optimized instance for the database to store and serve images.',
       'Use Amazon S3 for the front-end, AWS Lambda for the application layer, and DynamoDB for the database. Use S3 to store images.'
     ],

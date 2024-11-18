@@ -3232,7 +3232,7 @@ export const questions: Question[] = [
       'Increase the visibility timeout using the ChangeMessageVisibility API.',
       'Set an appropriate wait time using the ReceiveMessage API.'
     ],
-    correctAnswer: [3]
+    correctAnswer: [2]
   },
   {
     question:

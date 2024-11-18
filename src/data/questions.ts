@@ -2648,7 +2648,7 @@ export const questions: Question[] = [
       'S3 Standard-Infrequent Access (S3 Standard-IA)',
       'S3 Standard'
     ],
-    correctAnswer: [3]
+    correctAnswer: [0]
   },
   {
     question:

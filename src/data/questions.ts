@@ -3698,17 +3698,6 @@ export const questions: Question[] = [
   },
   {
     question:
-      'A company is using Amazon Aurora for its global ecommerce application. When large reports run, the application performs poorly. The ReadIOPS and CPUUtilization metrics spike when monthly reports run. What is the most cost-effective solution to improve performance?',
-    answers: [
-      'Migrate the monthly reporting to an Aurora Replica.',
-      'Migrate the Aurora database to a larger instance class.',
-      'Migrate the monthly reporting to Amazon Redshift.',
-      'Increase the Provisioned IOPS on the Aurora instance.'
-    ],
-    correctAnswer: [2]
-  },
-  {
-    question:
       "A company stores product data in an Amazon RDS MySQL database. Users at the company headquarters access this data. The operations team noticed the application running slowly. They want to separate read traffic from write traffic to improve performance. What should the solutions architect recommend to optimize the application's performance quickly?",
     answers: [
       'Change to a Multi-AZ deployment. Serve reads from the secondary Availability Zone.',

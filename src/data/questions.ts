@@ -3394,7 +3394,7 @@ export const questions: Question[] = [
       'Use API Gateway and Lambda functions for the application layer, and SQS for communication between services.',
       'Use SQS for messaging between EC2 servers in an Auto Scaling group. Monitor SQS queue length with CloudWatch and scale up on failures.'
     ],
-    correctAnswer: [3]
+    correctAnswer: [2]
   },
   {
     question:

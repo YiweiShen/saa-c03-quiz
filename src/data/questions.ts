@@ -2946,17 +2946,6 @@ export const questions: Question[] = [
   },
   {
     question:
-      'A company needs to send text messages to its app users. The users must reply to the messages. The company wants to store the replies for one year. What should the company use to meet these needs?',
-    answers: [
-      'Use Amazon Connect to send the messages, and Lambda functions to process the replies.',
-      'Use Amazon SNS to send the messages, and subscribe an Amazon Kinesis stream to store the replies.',
-      'Build an Amazon Pinpoint journey to send the messages, and send reply events to a Kinesis stream.',
-      'Use Amazon SQS to distribute the messages, and Lambda functions to process the replies.'
-    ],
-    correctAnswer: [0]
-  },
-  {
-    question:
       'A company wants to move a Python application that processes JSON documents to AWS Cloud. The application runs thousands of times daily. The company needs a solution that is highly available, maximizes scalability, and minimizes overhead. What is the best solution?',
     answers: [
       'Send JSON to SQS queue, run Python in ECS cluster to process messages, save results to RDS DB instance.',

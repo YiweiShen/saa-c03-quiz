@@ -2641,14 +2641,14 @@ export const questions: Question[] = [
   },
   {
     question:
-      'A company stores log data in Amazon S3 buckets. The data must be encrypted while it is uploaded and stored. What should the solutions architect do to meet these requirements?',
+      'A company stores log data in Amazon S3 buckets. The data must be encrypted while it is uploaded in transit and stored at rest. What should the solutions architect do to meet these requirements?',
     answers: [
       'Use client-side encryption to encrypt the data before uploading it to S3.',
       'Enable encryption on the S3 buckets using AWS KMS keys.',
       'Use server-side encryption to encrypt the data when uploading it to S3.',
       'Create S3 bucket policies to enforce server-side encryption with S3 keys.'
     ],
-    correctAnswer: [2]
+    correctAnswer: [0]
   },
   {
     question:

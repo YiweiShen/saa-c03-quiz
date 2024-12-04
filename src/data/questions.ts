@@ -1200,17 +1200,6 @@ export const questions: Question[] = [
   },
   {
     question:
-      'A bicycle sharing company is developing a multi-tier architecture to track the location of its bicycles during peak operating hours. The company wants to use these data points in its existing analytics platform. A solutions architect must determine the most viable multi-tier option to support this architecture. The data points must be accessible from the REST API. Which action meets these requirements for storing and retrieving location data?',
-    answers: [
-      'Use Amazon Athena with Amazon S3.',
-      'Use Amazon API Gateway with AWS Lambda.',
-      'Use Amazon QuickSight with Amazon Redshift.',
-      'Use Amazon API Gateway with Amazon Kinesis Data Analytics.'
-    ],
-    correctAnswer: [3]
-  },
-  {
-    question:
       'A company has an automobile sales website that stores its listings in a database on Amazon RDS. When an automobile is sold, the listing needs to be removed from the website and the data must be sent to multiple target systems. Which design should a solutions architect recommend?',
     answers: [
       'Create an AWS Lambda function triggered when the database on Amazon RDS is updated to send the information to an Amazon Simple Queue Service (Amazon SQS) queue for the targets to consume.',

@@ -962,7 +962,7 @@ export const questions: Question[] = [
       'Persist the customer data to Lambda local storage. Configure new Lambda functions to scan the local storage to save the customer data to the database.',
       'Store the customer data in an Amazon Simple Queue Service (Amazon SQS) FIFO queue. Create a new Lambda function that polls the queue and stores the customer data in the database.'
     ],
-    correctAnswer: [0]
+    correctAnswer: [3]
   },
   {
     question:

@@ -308,7 +308,7 @@ export const questions: Question[] = [
       "Use AWS Directory Service. Create a two-way trust relationship with the company's self-managed Microsoft Active Directory.",
       'Deploy an identity provider (IdP) on premises. Enable AWS Single Sign-On (AWS SSO) from the AWS SSO console.'
     ],
-    correctAnswer: [0]
+    correctAnswer: [1]
   },
   {
     question:

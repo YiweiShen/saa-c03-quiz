@@ -3529,7 +3529,7 @@ export const questions: Question[] = [
       'Use a target tracking action triggered at lower CPU threshold and decrease the cooldown period.',
       'Set the desired capacity to 20 shortly before the office opens using a scheduled action.'
     ],
-    correctAnswer: [0]
+    correctAnswer: [2]
   },
   {
     question:
